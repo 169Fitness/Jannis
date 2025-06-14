@@ -1,0 +1,41 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+
+function App() {
+  return (
+    <div className="min-h-screen bg-gray-50 p-4 font-sans">
+      <h1 className="text-3xl font-bold text-center mb-6">FitFusion</h1>
+      <div className="w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="bg-white p-4 rounded-2xl shadow">
+          <h2 className="text-xl font-semibold mb-2">Kalorien-Tracker</h2>
+          <input type="text" placeholder="Lebensmittel eingeben..." className="w-full border p-2 rounded mb-2" />
+          <textarea placeholder="Notizen oder Rezept..." className="w-full border p-2 rounded mb-2"></textarea>
+          <button className="bg-blue-500 text-white px-4 py-2 rounded">Hinzufügen</button>
+        </div>
+
+        <div className="bg-white p-4 rounded-2xl shadow">
+          <h2 className="text-xl font-semibold mb-2">Trainingsplan</h2>
+          <input type="text" placeholder="Ziel (z. B. Muskelaufbau)" className="w-full border p-2 rounded mb-2" />
+          <input type="text" placeholder="Trainingslevel" className="w-full border p-2 rounded mb-2" />
+          <input type="number" placeholder="Tage/Woche" className="w-full border p-2 rounded mb-2" />
+          <button className="bg-green-500 text-white px-4 py-2 rounded">Plan erstellen</button>
+        </div>
+
+        <div className="bg-white p-4 rounded-2xl shadow md:col-span-2">
+          <h2 className="text-xl font-semibold mb-2">Geräte-Videos</h2>
+          <p className="mb-2">Hier findest du Videos zur korrekten Ausführung von Geräten im Fitnessstudio.</p>
+          <button className="bg-purple-600 text-white px-4 py-2 rounded">Videos ansehen</button>
+        </div>
+
+        <div className="bg-white p-4 rounded-2xl shadow md:col-span-2">
+          <h2 className="text-xl font-semibold mb-2">Ernährungswissen</h2>
+          <p>Erfahre mehr über Makros, Mikros, Supplemente und gesunde Ernährung – einfach erklärt.</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
